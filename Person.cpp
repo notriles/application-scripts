@@ -1,7 +1,7 @@
 #include <iostream> // include iostream for cout
 #include <string> // include string for person name
 
-enum class color { BROWN, BLOND, BLACK }; // create enum for hair color
+enum class color { BROWN, BLOND, BLACK }; // create enum for hair color objects
 
 class Person
 {
