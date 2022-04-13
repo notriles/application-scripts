@@ -56,6 +56,6 @@ int main()
 {
   	// create a new Person object with random attributes
 	Person Bob = Person("Robert", 23, color::BROWN);
-  	// print Bob's name to the console
+  	// print the name to the console
 	std::cout << Bob.getName();
 }
