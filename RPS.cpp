@@ -24,7 +24,7 @@ std::string getUserChoice() // gets the user's choice from the console
 {
     std::string choice; // create a variable to store the choice
 
-    std::cout << "Please enter either rock, paper, or scissors." << std::endl; // prints instructions
+    std::cout << "Please enter either rock, paper, or scissors.\n"; // prints instructions
     std::cin >> choice; // saves the user's input to the string variable
 
     if (choice == "rock" || choice == "paper" || choice == "scissors") // check if choice is valid
@@ -33,7 +33,7 @@ std::string getUserChoice() // gets the user's choice from the console
     }
     else
     {
-        std::cout << "Invalid choice." << std::endl;
+        std::cout << "Invalid choice.\n\n";
         return getUserChoice(); // prompt user choice once more
     }
 }
@@ -63,7 +63,7 @@ std::string determineWinner(std::string userChoice, std::string computerChoice) 
     return didUserWin ? "user" : "computer"; // ternary operator to return results
 }
 
-int main()
+void play() // main game function
 {
     std::string computerChoice = getComputerChoice(); // get the computer choice
     std::string userChoice = getUserChoice(); // get the user choice
@@ -80,6 +80,15 @@ int main()
     else
     {
         std::cout << "You lost! You chose " << userChoice << " and the computer chose " << computerChoice; // the user lost, better luck next time :c
+    }
+}
+
+int main()
+{
+    while (true) // infinite game loop
+    {
+        play(); // play the game
+        std::cout << "\n\n"; // indent for next game
     }
 
     return 0;
