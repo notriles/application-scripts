@@ -5,7 +5,7 @@ enum class color { BROWN, BLOND, BLACK }; // create enum for hair color
 
 class Person
 {
-  // initialize name, age, and hair color
+  // initialize name, age, and hair color members
 	std::string name;
 	int age;
 	color hair;
